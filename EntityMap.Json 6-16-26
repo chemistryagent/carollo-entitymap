@@ -1,0 +1,203 @@
+{
+  "version": "1.0",
+  "schema": "https://entitymap.org/spec/v1.0",
+  "publisher": {
+    "name": "Carollo Engineers",
+    "url": "https://carollo.com"
+  },
+  "generated": "2026-06-16T00:00:00Z",
+  "profile": "core",
+  "verificationStatus": "self-declared",
+  "entities": [
+    {
+      "entityId": "e_001",
+      "@type": "Organization",
+      "name": "Carollo Engineers",
+      "description": "An environmental engineering firm specializing in planning, design, and construction support for water and wastewater infrastructure projects.",
+      "relations": [
+        {
+          "predicate": "OFFERS",
+          "targetId": "e_010",
+          "targetName": "PFAS Treatment Services"
+        },
+        {
+          "predicate": "OFFERS",
+          "targetId": "e_011",
+          "targetName": "Utility Planning"
+        },
+        {
+          "predicate": "OFFERS",
+          "targetId": "e_012",
+          "targetName": "Digital Water Services"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_002",
+      "@type": "Concept",
+      "name": "PFAS",
+      "description": "A group of persistent synthetic chemicals commonly referred to as forever chemicals that can contaminate drinking water supplies.",
+      "sameAs": "https://en.wikipedia.org/wiki/Per-_and_polyfluoroalkyl_substances",
+      "relations": [
+        {
+          "predicate": "REQUIRES",
+          "targetId": "e_010",
+          "targetName": "PFAS Treatment Services"
+        },
+        {
+          "predicate": "IMPACTS",
+          "targetId": "e_020",
+          "targetName": "Drinking Water Quality"
+        }
+      ],
+      "hasChunks": [
+        {
+          "chunkId": "c_001",
+          "text": "PFAS compounds are increasingly regulated due to concerns regarding persistence, mobility, and potential health impacts.",
+          "sourceUrl": "https://carollo.com/expertise/pfas/",
+          "pageTitle": "PFAS Solutions",
+          "publisher": "Carollo Engineers",
+          "contentType": "definition"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_003",
+      "@type": "Concept",
+      "name": "Inflow and Infiltration",
+      "description": "Groundwater and stormwater entering wastewater collection systems through defects, connections, or structural failures.",
+      "relations": [
+        {
+          "predicate": "INCREASES",
+          "targetId": "e_021",
+          "targetName": "Wastewater Treatment Costs"
+        },
+        {
+          "predicate": "REDUCED_BY",
+          "targetId": "e_011",
+          "targetName": "Utility Planning"
+        }
+      ],
+      "hasChunks": [
+        {
+          "chunkId": "c_002",
+          "text": "Reducing inflow and infiltration can improve collection system performance and lower treatment costs.",
+          "sourceUrl": "https://carollo.com",
+          "publisher": "Carollo Engineers",
+          "contentType": "evidence"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_004",
+      "@type": "Concept",
+      "name": "Water Reuse",
+      "description": "The treatment and beneficial reuse of reclaimed water for potable and non-potable applications.",
+      "relations": [
+        {
+          "predicate": "SUPPORTS",
+          "targetId": "e_022",
+          "targetName": "Water Supply Reliability"
+        },
+        {
+          "predicate": "DEPENDS_ON",
+          "targetId": "e_005",
+          "targetName": "Advanced Treatment Technologies"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_005",
+      "@type": "Concept",
+      "name": "Advanced Treatment Technologies",
+      "relations": [
+        {
+          "predicate": "INCLUDES",
+          "targetId": "e_006",
+          "targetName": "Reverse Osmosis"
+        },
+        {
+          "predicate": "INCLUDES",
+          "targetId": "e_007",
+          "targetName": "Advanced Oxidation"
+        },
+        {
+          "predicate": "INCLUDES",
+          "targetId": "e_008",
+          "targetName": "Membrane Filtration"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_010",
+      "@type": "Service",
+      "name": "PFAS Treatment Services",
+      "relations": [
+        {
+          "predicate": "TREATS",
+          "targetId": "e_002",
+          "targetName": "PFAS"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_011",
+      "@type": "Service",
+      "name": "Utility Planning",
+      "relations": [
+        {
+          "predicate": "ADDRESSES",
+          "targetId": "e_003",
+          "targetName": "Inflow and Infiltration"
+        },
+        {
+          "predicate": "SUPPORTS",
+          "targetId": "e_023",
+          "targetName": "Infrastructure Resilience"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_012",
+      "@type": "Service",
+      "name": "Digital Water Services",
+      "relations": [
+        {
+          "predicate": "USES",
+          "targetId": "e_013",
+          "targetName": "Predictive Analytics"
+        },
+        {
+          "predicate": "USES",
+          "targetId": "e_014",
+          "targetName": "Asset Management"
+        }
+      ]
+    },
+
+    {
+      "entityId": "e_015",
+      "@type": "Industry",
+      "name": "Data Centers",
+      "relations": [
+        {
+          "predicate": "REQUIRES",
+          "targetId": "e_022",
+          "targetName": "Water Supply Reliability"
+        },
+        {
+          "predicate": "BENEFITS_FROM",
+          "targetId": "e_004",
+          "targetName": "Water Reuse"
+        }
+      ]
+    }
+  ]
+}
