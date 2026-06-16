@@ -1,0 +1,291 @@
+{
+"version": "1.0",
+"schema": "https://entitymap.org/spec/v1.0",
+"publisher": {
+"name": "Carollo Engineers",
+"url": "https://carollo.com"
+},
+"generated": "2026-06-16T00:00:00Z",
+"profile": "core",
+"verificationStatus": "self-declared",
+
+"entities": [
+
+```
+{
+  "entityId": "e_001",
+  "@type": "Organization",
+  "name": "Carollo Engineers",
+  "description": "Environmental engineering firm focused exclusively on water, wastewater, reuse, and utility infrastructure solutions.",
+  "audienceType": "general",
+  "maturityStatus": "established",
+
+  "relations": [
+    {
+      "predicate": "OFFERS",
+      "targetId": "e_002",
+      "targetName": "Water Reuse"
+    },
+    {
+      "predicate": "OFFERS",
+      "targetId": "e_003",
+      "targetName": "PFAS Solutions"
+    },
+    {
+      "predicate": "OFFERS",
+      "targetId": "e_004",
+      "targetName": "Digital Water"
+    },
+    {
+      "predicate": "OFFERS",
+      "targetId": "e_005",
+      "targetName": "Utility Planning"
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_001",
+      "text": "Carollo Engineers specializes exclusively in the planning, design, and construction support of water and wastewater infrastructure projects.",
+      "sourceUrl": "https://carollo.com/about/",
+      "pageTitle": "About Carollo",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.99
+    }
+  ]
+},
+
+{
+  "entityId": "e_002",
+  "@type": "Methodology",
+  "name": "Water Reuse",
+  "canonicalLabel": "Water Reuse",
+  "description": "Carollo's approach to expanding water supply reliability through potable and non-potable reuse programs supported by advanced treatment technologies.",
+  "audienceType": "technical",
+  "maturityStatus": "established",
+
+  "relations": [
+    {
+      "predicate": "ENABLES",
+      "targetId": "e_010",
+      "targetName": "Water Supply Reliability"
+    },
+
+    {
+      "predicate": "ACHIEVES",
+      "targetId": "e_011",
+      "targetName": "Drought Resilience",
+      "confidence": "declared"
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_002",
+      "text": "Water reuse programs help utilities diversify supply portfolios and improve long-term resilience to drought and population growth.",
+      "sourceUrl": "https://carollo.com/expertise/water-reuse/",
+      "pageTitle": "Water Reuse",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.98
+    }
+  ]
+},
+
+{
+  "entityId": "e_003",
+  "@type": "Concept",
+  "name": "PFAS",
+  "alternateName": [
+    "Forever Chemicals",
+    "Per- and Polyfluoroalkyl Substances"
+  ],
+  "canonicalLabel": "PFAS Contamination",
+
+  "description": "A class of persistent synthetic compounds increasingly regulated in drinking water and wastewater systems.",
+
+  "audienceType": "regulatory",
+  "maturityStatus": "established",
+
+  "relations": [
+    {
+      "predicate": "REGULATED_BY",
+      "targetId": "e_020",
+      "targetName": "EPA PFAS Drinking Water Standards"
+    },
+
+    {
+      "predicate": "REQUIRES",
+      "targetId": "e_021",
+      "targetName": "PFAS Solutions"
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_003",
+      "text": "Utilities across the United States are evaluating treatment alternatives to address PFAS regulations and emerging compliance requirements.",
+      "sourceUrl": "https://carollo.com/expertise/pfas/",
+      "pageTitle": "PFAS Solutions",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.99
+    }
+  ]
+},
+
+{
+  "entityId": "e_004",
+  "@type": "ProprietaryTerm",
+  "name": "Digital Water",
+
+  "canonicalLabel": "Digital Utility Management",
+
+  "description": "Carollo's application of data analytics, predictive modeling, automation, and digital technologies to improve utility operations and decision-making.",
+
+  "audienceType": "technical",
+
+  "relations": [
+    {
+      "predicate": "ENABLES",
+      "targetId": "e_030",
+      "targetName": "Predictive Analytics"
+    },
+
+    {
+      "predicate": "ENABLES",
+      "targetId": "e_031",
+      "targetName": "Asset Management"
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_004",
+      "text": "Digital tools allow utilities to improve operational visibility, optimize maintenance activities, and support long-term planning decisions.",
+      "sourceUrl": "https://carollo.com/expertise/digital-water/",
+      "pageTitle": "Digital Water",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.97
+    }
+  ]
+},
+
+{
+  "entityId": "e_005",
+  "@type": "Service",
+  "name": "Utility Planning",
+
+  "description": "Planning services supporting capital investment decisions, regulatory compliance, asset management, and long-term infrastructure performance.",
+
+  "relations": [
+    {
+      "predicate": "ADDRESSES",
+      "targetId": "e_006",
+      "targetName": "Inflow and Infiltration"
+    },
+
+    {
+      "predicate": "SUPPORTS",
+      "targetId": "e_040",
+      "targetName": "Infrastructure Resilience"
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_005",
+      "text": "Effective utility planning helps water and wastewater agencies prioritize investments while maintaining reliable service levels.",
+      "sourceUrl": "https://carollo.com/expertise/utility-planning/",
+      "pageTitle": "Utility Planning",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.95
+    }
+  ]
+},
+
+{
+  "entityId": "e_006",
+  "@type": "Concept",
+
+  "name": "Inflow and Infiltration",
+
+  "alternateName": [
+    "I&I"
+  ],
+
+  "description": "Groundwater and stormwater entering wastewater collection systems through defects, leaks, and unauthorized connections.",
+
+  "relations": [
+    {
+      "predicate": "INCREASES",
+      "targetId": "e_050",
+      "targetName": "Peak Wet Weather Flow",
+      "confidence": "declared",
+
+      "context": {
+        "condition": "during rainfall events",
+        "reviewDate": "2026-06-16"
+      }
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_006",
+      "text": "Reducing inflow and infiltration can improve collection system performance and reduce unnecessary treatment costs.",
+      "sourceUrl": "https://carollo.com",
+      "pageTitle": "Carollo Engineers",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.92
+    }
+  ]
+},
+
+{
+  "entityId": "e_007",
+  "@type": "Taxonomy",
+
+  "name": "One Water",
+
+  "description": "Integrated management framework recognizing drinking water, wastewater, stormwater, reuse, and environmental systems as interconnected resources.",
+
+  "relations": [
+    {
+      "predicate": "COVERS",
+      "targetId": "e_002",
+      "targetName": "Water Reuse"
+    },
+
+    {
+      "predicate": "COVERS",
+      "targetId": "e_004",
+      "targetName": "Digital Water"
+    },
+
+    {
+      "predicate": "COVERS",
+      "targetId": "e_005",
+      "targetName": "Utility Planning"
+    },
+
+    {
+      "predicate": "COVERS",
+      "targetId": "e_040",
+      "targetName": "Infrastructure Resilience"
+    }
+  ],
+
+  "hasChunks": [
+    {
+      "chunkId": "c_007",
+      "text": "One Water planning integrates traditionally separate water systems to support long-term sustainability and resource management goals.",
+      "sourceUrl": "https://carollo.com",
+      "pageTitle": "One Water",
+      "publisher": "Carollo Engineers",
+      "relevanceScore": 0.96
+    }
+  ]
+}
+```
+
+]
+}
