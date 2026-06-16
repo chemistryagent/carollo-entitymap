@@ -1,0 +1,349 @@
+{
+"version": "1.0",
+"schema": "https://entitymap.org/spec/v1.0",
+"publisher": {
+"name": "Carollo Engineers",
+"url": "https://carollo.com"
+},
+"generated": "2026-06-16T00:00:00Z",
+"profile": "core",
+"verificationStatus": "self-declared",
+"entities": [
+
+```
+{
+  "entityId": "org_001",
+  "@type": "Organization",
+  "name": "Carollo Engineers",
+  "description": "Environmental engineering firm specializing in planning, design, and construction support services for water and wastewater infrastructure.",
+  "relations": [
+    {
+      "predicate": "OFFERS",
+      "targetId": "svc_001",
+      "targetName": "Utility Planning"
+    },
+    {
+      "predicate": "OFFERS",
+      "targetId": "svc_002",
+      "targetName": "Digital Water"
+    },
+    {
+      "predicate": "OFFERS",
+      "targetId": "svc_003",
+      "targetName": "PFAS Solutions"
+    },
+    {
+      "predicate": "OFFERS",
+      "targetId": "svc_004",
+      "targetName": "Water Reuse Services"
+    }
+  ]
+},
+
+{
+  "entityId": "tax_001",
+  "@type": "Taxonomy",
+  "name": "One Water",
+  "description": "Integrated planning approach recognizing all water sources as interconnected resources.",
+  "relations": [
+    {
+      "predicate": "COVERS",
+      "targetId": "con_001",
+      "targetName": "Water Reuse"
+    },
+    {
+      "predicate": "COVERS",
+      "targetId": "con_002",
+      "targetName": "Utility Planning"
+    },
+    {
+      "predicate": "COVERS",
+      "targetId": "con_003",
+      "targetName": "Digital Water"
+    },
+    {
+      "predicate": "COVERS",
+      "targetId": "con_004",
+      "targetName": "Infrastructure Resilience"
+    }
+  ]
+},
+
+{
+  "entityId": "con_001",
+  "@type": "Methodology",
+  "name": "Water Reuse",
+  "description": "Treatment and beneficial reuse of reclaimed water for potable and non-potable purposes.",
+  "relations": [
+    {
+      "predicate": "SUPPORTS",
+      "targetId": "out_001",
+      "targetName": "Water Supply Reliability"
+    },
+    {
+      "predicate": "DEPENDS_ON",
+      "targetId": "tax_002",
+      "targetName": "Advanced Treatment Technologies"
+    }
+  ],
+  "hasChunks": [
+    {
+      "chunkId": "c001",
+      "sourceUrl": "https://carollo.com/expertise/water-reuse/",
+      "pageTitle": "Water Reuse",
+      "contentType": "definition"
+    }
+  ]
+},
+
+{
+  "entityId": "con_005",
+  "@type": "Concept",
+  "name": "PFAS",
+  "alternateName": [
+    "Per- and Polyfluoroalkyl Substances",
+    "Forever Chemicals"
+  ],
+  "description": "Persistent synthetic chemicals found in drinking water, groundwater, and industrial waste streams.",
+  "relations": [
+    {
+      "predicate": "REGULATED_BY",
+      "targetId": "reg_001",
+      "targetName": "EPA PFAS Drinking Water Standards"
+    },
+    {
+      "predicate": "REQUIRES",
+      "targetId": "svc_003",
+      "targetName": "PFAS Solutions"
+    }
+  ],
+  "hasChunks": [
+    {
+      "chunkId": "c002",
+      "sourceUrl": "https://carollo.com/expertise/pfas/",
+      "pageTitle": "PFAS Solutions",
+      "contentType": "definition"
+    }
+  ]
+},
+
+{
+  "entityId": "con_006",
+  "@type": "Concept",
+  "name": "Inflow and Infiltration",
+  "alternateName": [
+    "I&I"
+  ],
+  "description": "Groundwater and stormwater entering wastewater systems through defects and unauthorized connections.",
+  "relations": [
+    {
+      "predicate": "INCREASES",
+      "targetId": "met_001",
+      "targetName": "Peak Wet Weather Flow"
+    },
+    {
+      "predicate": "ADDRESSED_BY",
+      "targetId": "svc_001",
+      "targetName": "Utility Planning"
+    }
+  ]
+},
+
+{
+  "entityId": "con_003",
+  "@type": "Concept",
+  "name": "Digital Water",
+  "description": "Application of data, analytics, automation, and intelligent systems to water utility operations.",
+  "relations": [
+    {
+      "predicate": "USES",
+      "targetId": "con_007",
+      "targetName": "Predictive Analytics"
+    },
+    {
+      "predicate": "USES",
+      "targetId": "con_008",
+      "targetName": "Digital Twin"
+    },
+    {
+      "predicate": "SUPPORTS",
+      "targetId": "con_009",
+      "targetName": "Asset Management"
+    }
+  ]
+},
+
+{
+  "entityId": "tax_002",
+  "@type": "Taxonomy",
+  "name": "Advanced Treatment Technologies",
+  "relations": [
+    {
+      "predicate": "COVERS",
+      "targetId": "tech_001",
+      "targetName": "Reverse Osmosis"
+    },
+    {
+      "predicate": "COVERS",
+      "targetId": "tech_002",
+      "targetName": "Membrane Filtration"
+    },
+    {
+      "predicate": "COVERS",
+      "targetId": "tech_003",
+      "targetName": "Advanced Oxidation"
+    },
+    {
+      "predicate": "COVERS",
+      "targetId": "tech_004",
+      "targetName": "Granular Activated Carbon"
+    }
+  ]
+},
+
+{
+  "entityId": "svc_001",
+  "@type": "Service",
+  "name": "Utility Planning",
+  "relations": [
+    {
+      "predicate": "ADDRESSES",
+      "targetId": "con_006",
+      "targetName": "Inflow and Infiltration"
+    },
+    {
+      "predicate": "SUPPORTS",
+      "targetId": "con_004",
+      "targetName": "Infrastructure Resilience"
+    }
+  ]
+},
+
+{
+  "entityId": "svc_002",
+  "@type": "Service",
+  "name": "Digital Water",
+  "relations": [
+    {
+      "predicate": "ENABLES",
+      "targetId": "con_007",
+      "targetName": "Predictive Analytics"
+    },
+    {
+      "predicate": "ENABLES",
+      "targetId": "con_008",
+      "targetName": "Digital Twin"
+    }
+  ]
+},
+
+{
+  "entityId": "svc_003",
+  "@type": "Service",
+  "name": "PFAS Solutions",
+  "relations": [
+    {
+      "predicate": "TREATS",
+      "targetId": "con_005",
+      "targetName": "PFAS"
+    }
+  ]
+},
+
+{
+  "entityId": "svc_004",
+  "@type": "Service",
+  "name": "Water Reuse Services",
+  "relations": [
+    {
+      "predicate": "IMPLEMENTS",
+      "targetId": "con_001",
+      "targetName": "Water Reuse"
+    }
+  ]
+},
+
+{
+  "entityId": "reg_001",
+  "@type": "Regulation",
+  "name": "EPA PFAS Drinking Water Standards",
+  "description": "Federal regulations establishing maximum contaminant levels for select PFAS compounds in drinking water."
+},
+
+{
+  "entityId": "reg_002",
+  "@type": "Regulation",
+  "name": "Safe Drinking Water Act"
+},
+
+{
+  "entityId": "reg_003",
+  "@type": "Regulation",
+  "name": "Clean Water Act"
+},
+
+{
+  "entityId": "met_001",
+  "@type": "Metric",
+  "name": "Peak Wet Weather Flow"
+},
+
+{
+  "entityId": "met_002",
+  "@type": "Metric",
+  "name": "Non-Revenue Water Percentage"
+},
+
+{
+  "entityId": "con_004",
+  "@type": "Concept",
+  "name": "Infrastructure Resilience",
+  "relations": [
+    {
+      "predicate": "SUPPORTS",
+      "targetId": "out_002",
+      "targetName": "Reliable Utility Operations"
+    }
+  ]
+},
+
+{
+  "entityId": "out_001",
+  "@type": "Outcome",
+  "name": "Water Supply Reliability"
+},
+
+{
+  "entityId": "out_002",
+  "@type": "Outcome",
+  "name": "Reliable Utility Operations"
+},
+
+{
+  "entityId": "ind_001",
+  "@type": "Industry",
+  "name": "Data Centers",
+  "relations": [
+    {
+      "predicate": "BENEFITS_FROM",
+      "targetId": "con_001",
+      "targetName": "Water Reuse"
+    }
+  ]
+},
+
+{
+  "entityId": "ind_002",
+  "@type": "Industry",
+  "name": "Municipal Water Utilities"
+},
+
+{
+  "entityId": "ind_003",
+  "@type": "Industry",
+  "name": "Wastewater Utilities"
+}
+```
+
+]
+}
